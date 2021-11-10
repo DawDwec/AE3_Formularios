@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE3 Formularios</title>
+
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>ç
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JavaScript-->
+    <script type="text/javascript" defer src="js/javascript.js"></script>
+
+</head>
+<body>
+    <div>
+        <form onsubmit="return handleData()" action="pedido.php" method="post">
+        <fieldset id="pedido">
+            <legend>Datos cliente:</legend>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <label for="direccion">Direccion:</label>
+                <input type="text" class="form-control" id="direccion" required>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" class="form-control" id="telefono" required>
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <br>
+
+            <legend>Ingredientes pizza:</legend>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" name="tamano" id="pequena" class="form-check-input" required>Pequeña <br>
+                    <input type="radio" name="tamano" id="mediana" class="form-check-input">Mediana <br>
+                    <input type="radio" name="tamano" id="grande" class="form-check-input">Grande
+                </label>
+            </div>
+
+            <br>
+
+            <div style="visibility:hidden; color: red;" id="chk_option_error">
+                <b>SELECCIONE AL MENOS UN INGREDIENTE</b>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="queso" name="langs[]"><label for="langs_javascript">Queso</label><br>
+                    <input type="checkbox" class="form-check-input" value="jamon" name="langs[]"><label for="langs_javascript">Jamon</label><br>
+                    <input type="checkbox" class="form-check-input" value="tomates" name="langs[]"><label for="langs_javascript">Tomates</label><br>
+                    <input type="checkbox" class="form-check-input" value="peperoni" name="langs[]"><label for="langs_javascript">Peperoni</label>
+                </label>
+            </div>
+
+            <br>
+
+            <div>
+                <button id="botonProcesar" type="submit" value="Submit" class="btn btn-success btn-block">Procesar pedido</button> 
+            </div>
+
+            <br>
+
+            <div>
+                <button id="botonReset" type="reset" value="Reset" class="btn btn-outline-danger btn-block">Limpiar pedido</button> 
+            </div>
+        </fieldset>
+        </form>
+    </div>
+</body>
+</html>
