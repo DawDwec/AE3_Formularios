@@ -21,6 +21,26 @@ function validacion() {
     return false;
   }
 
+  //Expresiones para validar los campos del formulario
+
+  reNombre = /^[A-Z][A-z]+$/
+  if(!nombre.value.match(reNombre)) {
+    alert ('¡¡¡ERROR!!! Formato del nombre incorrecto.')
+    return false;
+  }
+
+  reTelefono = /^\d{9}$/
+  if (!telefono.value.match(reTelefono)) {
+    alert ('¡¡¡ERROR!!! Formato del telefono incorrecto.')
+    return false;
+  }
+
+  reEmail = /^(.+\@.+\..+)$/
+  if (!email.value.match(reEmail)) {
+    alert ('¡¡¡ERROR!!! Formato del correo electronico incorrecto.')
+    return false;
+  }
+
   //Comprobamos si se selecciona el tamaño de la pizza
   pregunta = document.getElementsByName("tamano");
   var seleccionado = false;
@@ -38,13 +58,10 @@ function validacion() {
   //Comprobamos si se selecciona al menos un ingrediente
   var form_data = new FormData(document.querySelector("form"));
     
-  if(!form_data.has("langs[]"))
-    {
+  if(!form_data.has("langs[]")) {
       document.getElementById("chk_option_error").style.visibility = "visible";
       return false;
-    }
-  else
-    {
+    } else {
       document.getElementById("chk_option_error").style.visibility = "hidden";
       return true;
     }
