@@ -27,18 +27,18 @@
 </head>
 <body>
     <div>
-        <form onsubmit="return handleData()" action="pedido.php" method="post">
+        <form id="formulario" action="pedido.php" method="post">
         <fieldset id="pedido">
             <legend>Datos cliente:</legend>
             <div class="form-group">
                 <label for="nombre">Nombre:</label>
-                <input type="text" class="form-control" id="nombre" required>
+                <input id="nombre" type="text" class="form-control" required>
                 <label for="direccion">Direccion:</label>
-                <input type="text" class="form-control" id="direccion" required>
+                <input id="direccion" type="text" class="form-control" required>
                 <label for="telefono">Telefono:</label>
-                <input type="tel" class="form-control" id="telefono" required>
+                <input id="telefono" type="tel" class="form-control" required>
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" required>
+                <input id="email" type="email" class="form-control"  required>
             </div>
 
             <br>
@@ -46,23 +46,23 @@
             <legend>Ingredientes pizza:</legend>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="radio" name="tamano" id="pequena" class="form-check-input" required>Pequeña <br>
-                    <input type="radio" name="tamano" id="mediana" class="form-check-input">Mediana <br>
-                    <input type="radio" name="tamano" id="grande" class="form-check-input">Grande
+                    <input id="pequena" type="radio" name="tamano" class="form-check-input" required>Pequeña <br>
+                    <input id="mediana" type="radio" name="tamano" class="form-check-input">Mediana <br>
+                    <input id="grande" type="radio" name="tamano" class="form-check-input">Grande
                 </label>
             </div>
 
             <br>
 
-            <div style="visibility:hidden; color: red;" id="chk_option_error">
+            <div id="chk_option_error">
                 <b>SELECCIONE AL MENOS UN INGREDIENTE</b>
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input" value="queso" name="langs[]"><label for="langs_javascript">Queso</label><br>
-                    <input type="checkbox" class="form-check-input" value="jamon" name="langs[]"><label for="langs_javascript">Jamon</label><br>
-                    <input type="checkbox" class="form-check-input" value="tomates" name="langs[]"><label for="langs_javascript">Tomates</label><br>
-                    <input type="checkbox" class="form-check-input" value="peperoni" name="langs[]"><label for="langs_javascript">Peperoni</label>
+                    <input id="ingr1" type="checkbox" class="form-check-input" name="langs[]"><label for="langs_javascript">Queso</label><br>
+                    <input id="ingr2" type="checkbox" class="form-check-input" name="langs[]"><label for="langs_javascript">Jamon</label><br>
+                    <input id="ingr3" type="checkbox" class="form-check-input" name="langs[]"><label for="langs_javascript">Tomates</label><br>
+                    <input id="ingr4" type="checkbox" class="form-check-input" name="langs[]"><label for="langs_javascript">Peperoni</label>
                 </label>
             </div>
 

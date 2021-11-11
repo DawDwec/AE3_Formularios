@@ -5,6 +5,11 @@
     height: auto;
 }
 
+#chk_option_error {
+    visibility:hidden; 
+    color: red;
+}
+
 @media screen and (max-width: 750px) { 
     #pedido {
         margin-left: auto;
