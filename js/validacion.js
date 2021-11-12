@@ -66,35 +66,4 @@ function validacion() {
     }
 }
 
-//Definimos la funcion sumar
-function sumar(a, b, c, d, e, f, g) {
-  var resultado = a + b + c + d + e + f + g;
-  return resultado;
-}
-
-//Asignamos los precios a nuestras variables
-pequena.value = 5;
-mediana.value = 10;
-grande.value = 15;
-ingr1.value = 1;
-ingr2.value = 1;
-ingr3.value = 1;
-ingr4.value = 1;
-
-//Aplicamos la funciona "sumar" a nuestro formulario
-botonProcesar.onclick = function() {
-  let valor1 = parseInt(pequena.value)
-  let valor2 = parseInt(mediana.value)
-  let valor3 = parseInt(grande.value)
-  let valor4 = parseInt(ingr1.value)
-  let valor5 = parseInt(ingr2.value)
-  let valor6 = parseInt(ingr3.value)
-  let valor7 = parseInt(ingr4.value)
-
-  let precioTotal = sumar(valor1, valor2, valor3, valor4, valor5, valor6, valor7)
-
-  resultado.value=precioTotal
-
-}
-
 formulario.onsubmit = validacion;
