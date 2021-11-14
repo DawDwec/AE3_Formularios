@@ -33,26 +33,22 @@
             <input type="checkbox" name="pimiento" value="1.00" onclick="this.form.total.value=calcularTotal(this);">
             AÑADIR PIMIENTO - 1.00 €
             <br>
-            <input type="checkbox" name="pimiento" value="1.00" onclick="this.form.total.value=calcularTotal(this);">
+            <input type="checkbox" name="queso" value="1.00" onclick="this.form.total.value=calcularTotal(this);">
             EXTRA DE QUESO - 1.00 €
             <br>
             <br>
             <input type="hidden" name="calculadoTotal" value="0">
             <input type="hidden" name="radioButtonSeleccionado" value="0">
             <strong>El valor total de tu pedido es: </strong>
-            <input type="text" name="total" readonly onfocus="this.blur();">
+            <input type="text" id="total" name="total" readonly onfocus="this.blur();">
             <br><br>
             
-
-            <div id="contenedor">
-                <div id="nameDiv" class="input"></div>
-            </div>
             <button id="entry">Pagar con Tarjeta</button>
             </table>
 
             <table id="display">
                 <tr>
-                    <th>A PAGAR</th>
+                    <th>Total</th>
                 </tr>
             </form>
 
